@@ -17,16 +17,22 @@ title: Yet Another Cool Blog Title
 #email: p.faion@web.de
 description: >
   This will be my awesome blog once I have it set up.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+# baseurl: "" # the subpath of your site, e.g. /blog
+# url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
-github_username:  pfaion
+# github_username:  pfaion
+
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-coffeescript
+
 
 # Build settings
 markdown: kramdown
-# theme: minima
-gems:
-  - jekyll-feed
 exclude:
   - Gemfile
   - Gemfile.lock
