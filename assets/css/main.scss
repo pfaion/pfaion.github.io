@@ -1,14 +1,21 @@
 ---
 ---
 
-body {
-  background-color: rgb(10%, 10%, 20%);
-  padding-left: 40px;
-}
+
+
+
 
 h1 {
-  color: white;
+  color: black;
 }
-h1.warn {
-  color: red;
+
+div.content {
+  margin: auto;
+  max-width: 800px;
+  border: 1px dashed #bbb;
+}
+
+div.menu-tab {
+  padding: 10px;
+  border: 1px solid #bbb;
 }

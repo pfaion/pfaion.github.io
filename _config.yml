@@ -4,7 +4,6 @@ title: Yet Another Cool Blog Title
 description: >
   This will be my awesome blog once I have it set up.
 
-
 sass:
   sass_dir: _sass
   style: compressed
