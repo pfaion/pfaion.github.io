@@ -1,21 +1,61 @@
 ---
 ---
 
+$c1: #3e3e3e;
 
-
-
-
-h1 {
-  color: black;
+#content {
+  margin: auto;
+  max-width: 900px;
+  padding: 50px;
+  border: 1px dashed #bbb;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
 }
 
-div.content {
-  margin: auto;
-  max-width: 800px;
-  border: 1px dashed #bbb;
+#site-title {
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Gruppo', cursive;
+  // font-family: 'Monoton', cursive;
+  padding: {
+    bottom: 40px;
+  }
+}
+
+
+
+#menu {
+  $_: 1px solid $c1;
+  border: {
+    bottom: $_;
+    top: $_;
+  }
+  margin: {
+    bottom: 40px;
+  }
+}
+
+#menu a {
+  color: black;
+  text-decoration: none;
+  
+  &:hover {
+    div {
+      background-color: $c1;
+    }
+    color: white;
+  }
 }
 
 div.menu-tab {
   padding: 10px;
-  border: 1px solid #bbb;
+  text-align: center;
+}
+
+
+h1 {
+  color: black;
+  margin: {
+    bottom: 20px;
+  }
 }
