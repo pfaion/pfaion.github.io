@@ -8,9 +8,6 @@ sass:
   sass_dir: _sass
   style: compressed
 
-plugins:
-  - jekyll-coffeescript
-
 
 # Build settings
 markdown: kramdown
