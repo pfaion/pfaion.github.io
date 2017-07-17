@@ -3,13 +3,18 @@
 
 $c1: #3e3e3e;
 
+
+
 #content {
   margin: auto;
-  max-width: 900px;
-  padding: 50px;
-  border: 1px dashed #bbb;
-  font-size: 18px;
+  max-width: 33em;
+  font-size: 15px;
   font-family: 'Open Sans', sans-serif;
+  hyphens: auto;
+  
+  p {
+    margin-bottom: 15px;
+  }
 }
 
 #site-title {
@@ -18,7 +23,8 @@ $c1: #3e3e3e;
   font-family: 'Gruppo', cursive;
   // font-family: 'Monoton', cursive;
   padding: {
-    bottom: 40px;
+    top: 20px;
+    bottom: 30px;
   }
 }
 
@@ -50,6 +56,7 @@ $c1: #3e3e3e;
 div.menu-tab {
   padding: 10px;
   text-align: center;
+  font-size: 20px;
 }
 
 
@@ -57,5 +64,13 @@ h1 {
   color: black;
   margin: {
     bottom: 20px;
+  }
+}
+
+.clickable-row {
+  cursor: pointer;
+  &:hover {
+    background-color: $c1;
+    color: white;
   }
 }
