@@ -3,3 +3,22 @@
 
 @import 'variables';
 @import 'bootstrap/bootstrap';
+
+header {
+    background-color: black;
+    color: white;
+    height: 100px;
+    @extend .row;
+    @extend .align-items-center;
+
+    h1 {
+        @extend .col;
+        text-align: center;
+    }
+}
+
+footer {
+    background-color: black;
+    color: white;
+    height: 30px;
+}
