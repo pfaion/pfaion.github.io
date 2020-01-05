@@ -3,6 +3,7 @@
 
 @import 'variables';
 @import 'bootstrap/bootstrap';
+@import url(highlight/monokai.css);
 
 header {
     background-color: black;
@@ -14,6 +15,20 @@ header {
     h1 {
         @extend .col;
         text-align: center;
+    }
+}
+
+div.highlighter-rouge
+{
+    div.highlight {
+        background: none;
+    }
+    pre.highlight {
+        font-size: 80%;
+        padding: 20px;
+        width: 55em;
+        border-radius: 5px;
+        border: 1px solid black;
     }
 }
 

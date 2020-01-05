@@ -1,0 +1,6 @@
+<ul>
+  {% assign posts = site.posts | where:"categories",include.category %}
+  {% for post in posts %}
+  {% include post-list-item.html post=post %}
+  {% endfor %}
+</ul>

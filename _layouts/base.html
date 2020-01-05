@@ -2,12 +2,16 @@
 ---
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
   <title>{{site.title}}</title>
 </head>
+
 <body>
-  <header><h1>{{site.title}}</h1></header>
+  <header>
+    <h1>{{site.title}}</h1>
+  </header>
   <nav class="navbar navbar-expand navbar-light bg-light">
     <ul class="navbar-nav">
       {% for item in site.data.nav %}
@@ -17,5 +21,8 @@
       {% endfor %}
     </ul>
   </nav>
+  <main>
+    {{content}}
+  </main>
   <footer></footer>
 </body>

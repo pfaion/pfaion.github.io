@@ -1,6 +1,9 @@
 
-- title: Home
-  url: /
+- title: Posts
+  url: /blog.html
+
+- title: Projects
+  url: /projects.html
 
 - title: About
   url: /about.html
