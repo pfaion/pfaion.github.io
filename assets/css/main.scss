@@ -1,21 +1,51 @@
 ---
 ---
 
-@import 'variables';
 @import 'bootstrap/bootstrap';
 @import url(highlight/monokai.css);
 
-header {
-    background-color: black;
-    color: white;
-    height: 100px;
-    @extend .row;
-    @extend .align-items-center;
+$page-width: 800px;
+$buffer-padding: 10px;
 
+
+header {
+    // general header styling
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid black;
+
+    padding: {
+        top: 100px;
+        bottom: 80px;
+    }
+
+    // center all children
+    @extend .align-items-center;
+    > * {
+        max-width: $page-width;
+        margin: {
+            left: auto;
+            right: auto;
+        }
+        padding: {
+            left: $buffer-padding;
+            right: $buffer-padding;
+        }
+    }
+
+    // text center title
     h1 {
-        @extend .col;
         text-align: center;
     }
+}
+
+main {
+    max-width: $page-width;
+    margin: {
+        left: auto;
+        right: auto;
+    }
+    padding: 50px $buffer-padding;
 }
 
 div.highlighter-rouge
