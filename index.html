@@ -6,60 +6,35 @@
 <head>
   <link href="assets/css/main.css" rel="stylesheet">
   <title>{{site.title}}</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="assets/js/snake.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
   <script>
-
-    function loop(callback) {
-      function callback_loop(t = 0) {
-        if (t > 0) callback(t);
-        window.requestAnimationFrame(callback_loop);
-      }
-      callback_loop();
-    }
-
-    $(window).on("load", function () {
-
-      var snake = null;
-
-      var header = $("#interactive-header");
-      function restart() {
-        let width = header.innerWidth();
-        let height = header.innerHeight();
-
-        width -= width % Snake.res;
-        height -= height % Snake.res;
-
-        if (snake !== null) {
-          if (snake.width == width && snake.height == header) return;
-          snake.destroy();
-        }
-        snake = new Snake(width, height);
-      }
-
-      $(window).resize(restart);
-      restart();
-
-      loop(function (time) {
-        snake.update(time);
-        header.css("background-image", `url("${snake.canvas.toDataURL("image/png")}")`);
-      });
-
-    });
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
   </script>
 </head>
 
 <body>
   <header id="interactive-header">
     <h1>{{site.title}}</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-      exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-      irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-      officia deserunt mollit anim id est laborum.
-    </p>
+    <p>Software Craftsman – Cognitive Scientist – Creative Problem Solver</p>
+    <div id="link-icons">
+
+      {% for icon in site.data.social-icons %}
+      <a class="btn social-icon social-icon-{{ icon.key }}" href="{{ icon.url }}" data-toggle="tooltip"
+        data-placement="bottom" title="{{ icon.tooltip }}">
+        {% include {{ icon.key | prepend: 'social-icons/' | append: '.svg'}} %}
+      </a>
+      {% endfor %}
+    </div>
 
   </header>
 

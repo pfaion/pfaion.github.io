@@ -1,4 +1,43 @@
 
+
+// function loop(callback) {
+//   function callback_loop(t = 0) {
+//     if (t > 0) callback(t);
+//     window.requestAnimationFrame(callback_loop);
+//   }
+//   callback_loop();
+// }
+
+// $(window).on("load", function () {
+
+//   var snake = null;
+
+//   var header = $("#interactive-header");
+//   function restart() {
+//     let width = header.innerWidth();
+//     let height = header.innerHeight();
+
+//     width -= width % Snake.res;
+//     height -= height % Snake.res;
+
+//     if (snake !== null) {
+//       if (snake.width == width && snake.height == header) return;
+//       snake.destroy();
+//     }
+//     snake = new Snake(width, height);
+//   }
+
+//   $(window).resize(restart);
+//   restart();
+
+//   loop(function (time) {
+//     snake.update(time);
+//     header.css("background-image", `url("${snake.canvas.toDataURL("image/png")}")`);
+//   });
+
+// });
+
+
 function rand_int(min, max) { // min and max included 
     return Math.floor(Math.random() * (max - min + 1) + min);
 }

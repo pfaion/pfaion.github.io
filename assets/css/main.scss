@@ -7,16 +7,24 @@
 $page-width: 800px;
 $buffer-padding: 10px;
 
+body, html, main {
+    // those are needed for bootstrap tooltips to be centered correctly
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
 
 header {
     // general header styling
-    background-repeat: no-repeat;
-    background-position: center;
-    border: 1px solid black;
+
+    background-color: #1e1e2f;
+    color: #ccc;
 
     padding: {
         top: 100px;
-        bottom: 80px;
+        bottom: 50px;
     }
 
     // center all children
@@ -31,11 +39,13 @@ header {
             left: $buffer-padding;
             right: $buffer-padding;
         }
+        text-align: center;
     }
 
-    // text center title
-    h1 {
-        text-align: center;
+    .social-icon > svg {
+        width: 32px;
+        height: 32px;
+        fill: #ccc;
     }
 }
 

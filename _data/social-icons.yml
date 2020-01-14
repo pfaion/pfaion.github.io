@@ -1,0 +1,15 @@
+
+- title: GitHub
+  tooltip: Find me on GitHub
+  url: https://github.com/pfaion
+  key: github
+
+- title: LinkedIn
+  tooltip: Add me on LinkedIn
+  url: https://www.linkedin.com/in/patrick-faion-249856179
+  key: linkedin
+
+- title: Resume
+  tooltip: About me
+  url: /about.html
+  key: resume
