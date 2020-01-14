@@ -42,10 +42,42 @@ header {
         text-align: center;
     }
 
-    .social-icon > svg {
-        width: 32px;
-        height: 32px;
-        fill: #ccc;
+    .social-icon {
+        border: 0;
+        padding: 5px;
+        margin: 5px;
+        & > svg {
+            width: 32px;
+            height: 32px;
+            fill: #ccc;
+        }
+    }
+
+    .social-icon-github {
+        border-radius: 30px;
+        &:hover {
+            background-color: #ffffff;
+            & > svg {
+                fill: #242424;
+            }
+        }
+    }
+
+    .social-icon-linkedin {
+        &:hover {
+            background-color: #ffffff;
+            & > svg {
+                fill: #2867B2;
+            }
+        }
+    }
+
+    .social-icon-resume {
+        &:hover {
+            & > svg {
+                fill: #28a745;
+            }
+        }
     }
 }
 
