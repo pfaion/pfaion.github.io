@@ -1,6 +1,6 @@
-<ul>
+<div class="list-group list-group-flush">
   {% assign posts = site.posts | where:"categories",include.category %}
   {% for post in posts %}
   {% include post-list-item.html post=post %}
   {% endfor %}
-</ul>
+</div>
