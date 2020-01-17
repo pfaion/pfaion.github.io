@@ -9,7 +9,7 @@
   url: https://www.linkedin.com/in/patrick-faion-249856179
   key: linkedin
 
-- title: Resume
-  tooltip: About me
-  url: /about.html
-  key: resume
+# - title: Resume
+#   tooltip: 
+#   url: /about.html
+#   key: resume
